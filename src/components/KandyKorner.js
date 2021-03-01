@@ -1,4 +1,5 @@
 import { BrowserRouter as Router } from "react-router-dom"
+import { ApplicationView } from "./ApplicationView"
 import { LocationList } from "./locations/LocationList"
 import { LocationProvider } from "./locations/LocationProvider"
 import { NavBar } from "./nav/NavBar"
@@ -10,9 +11,7 @@ export const KandyKorner = () => {
             <Router>
                 <NavBar />
             </Router>
-            <LocationProvider>
-                <LocationList />
-            </LocationProvider>
+            <ApplicationView />
         </>
     )
 }
