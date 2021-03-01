@@ -1,6 +1,22 @@
 {
     "products":[],
-    "locations":[],
+    "locations":[
+        {
+            "address": "P Sherman 42 Wallaby Way",
+            "squareFootage": 300,
+            "handicapAccessible": true
+        },
+        {
+            "address": "3148 Lonestar St",
+            "squareFootage": 5000,
+            "handicapAccessible": false
+        },
+        {
+            "address": "123 Main",
+            "squareFootage": 14000,
+            "handicapAccessible": false
+        }
+    ],
     "employees":[],
     "productTypes":[],
     "customers":[]
