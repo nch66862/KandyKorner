@@ -3,42 +3,50 @@
         {
             "id": 1,
             "productTypeId": 1,
-            "name": "Werthers"
+            "name": "Werthers",
+            "price": 3
         },
         {
             "id": 2,
             "productTypeId": 1,
-            "name": "Life Savers"
+            "name": "Life Savers",
+            "price": 4
         },
         {
             "id": 3,
             "productTypeId": 2,
-            "name": "Double Bubble"
+            "name": "Double Bubble",
+            "price": 5
         },
         {
             "id": 4,
             "productTypeId": 2,
-            "name": "Spearmint"
+            "name": "Spearmint",
+            "price": 6
         },
         {
             "id": 5,
             "productTypeId": 3,
-            "name": "Lindt"
+            "name": "Lindt",
+            "price": 7
         },
         {
             "id": 6,
             "productTypeId": 3,
-            "name": "Hersheys"
+            "name": "Hersheys",
+            "price": 8
         },
         {
             "id": 7,
             "productTypeId": 4,
-            "name": "Dr Pepper"
+            "name": "Dr Pepper",
+            "price": 9
         },
         {
             "id": 8,
             "productTypeId": 4,
-            "name": "Coca Cola"
+            "name": "Coca Cola",
+            "price": 10
         }
     ],
     "locations":[
