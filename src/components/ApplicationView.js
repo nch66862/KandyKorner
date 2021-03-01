@@ -1,32 +1,30 @@
 import React from "react"
 import { Route } from "react-router-dom"
 import { Home } from "./Home"
-import { CustomerProvider } from "./customer/CustomerProvider"
-import { CustomerList } from "./customer/CustomerList"
-import { EmployeeProvider } from "./employee/EmployeeProvider"
-import { EmployeeList } from "./employee/EmployeeList"
-import { LocationProvider } from "./location/LocationProvider"
-import { LocationList } from "./location/LocationList"
-import { EmployeeForm } from "./employee/EmployeeForm"
-import { LocationForm } from "./location/LocationForm"
+// import { CustomerProvider } from "./customer/CustomerProvider"
+// import { CustomerList } from "./customer/CustomerList"
+// import { EmployeeProvider } from "./employee/EmployeeProvider"
+// import { EmployeeList } from "./employee/EmployeeList"
+import { LocationProvider } from "./locations/LocationProvider"
+import { LocationList } from "./locations/LocationList"
+// import { EmployeeForm } from "./employee/EmployeeForm"
+// import { LocationForm } from "./location/LocationForm"
 
 export const ApplicationView = () => {
     return (
         <>
-            <CustomerProvider>
-                <Route exact path="/">
-                    <Home />
-                </Route>
-            </CustomerProvider>
+            <Route exact path="/">
+                <Home />
+            </Route>
             <LocationProvider>
                 <Route exact path="/locations">
                     <LocationList />
                 </Route>
-                <Route path="/locations/create">
+                {/* <Route path="/locations/create">
                     <LocationForm />
-                </Route>
+                </Route> */}
             </LocationProvider>
-            <CustomerProvider>
+            {/* <CustomerProvider>
                 <Route exact path="/customers">
                     <CustomerList />
                 </Route>
@@ -40,7 +38,7 @@ export const ApplicationView = () => {
                         <EmployeeForm />
                     </Route>
                 </LocationProvider>
-            </EmployeeProvider>
+            </EmployeeProvider> */}
         </>
     )
 }
