@@ -4,7 +4,7 @@ import { Home } from "./Home"
 // import { CustomerProvider } from "./customer/CustomerProvider"
 // import { CustomerList } from "./customer/CustomerList"
 import { EmployeeProvider } from "./employees/EmployeeProvider"
-// import { EmployeeList } from "./employee/EmployeeList"
+import { EmployeeList } from "./employees/EmployeeList"
 import { LocationProvider } from "./locations/LocationProvider"
 import { LocationList } from "./locations/LocationList"
 import { ProductProvider } from "./products/ProductProvider"
@@ -24,7 +24,7 @@ export const ApplicationView = () => {
                 </Route>
             </LocationProvider>
             <ProductProvider>
-                <Route>
+                <Route path="/products">
                     <ProductList />
                 </Route>
             </ProductProvider>
@@ -35,9 +35,9 @@ export const ApplicationView = () => {
             </CustomerProvider> */}
             <EmployeeProvider>
                 <LocationProvider>
-                    {/* <Route exact path="/employees">
+                    <Route exact path="/employees">
                         <EmployeeList />
-                    </Route> */}
+                    </Route>
                     <Route path="/employees/create">
                         <EmployeeForm />
                     </Route>

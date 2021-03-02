@@ -13,7 +13,7 @@ export const EmployeeForm = () => {
         locationId: 0,
         manager: false,
         fullTime: false,
-        hourlyRate: 0
+        hourlyRate: ""
     });
 
     const history = useHistory();
@@ -25,11 +25,12 @@ export const EmployeeForm = () => {
     const handleControlledInputChange = (event) => {
         const newEmployee = { ...employee }
         let selectedVal = event.target.value
-        if (event.target.id.includes("Id")) {
+        // debugger
+        if (event.target.id.includes("Id") || event.target.id.includes("Rate")) {
             selectedVal = parseInt(selectedVal)
         }
-        else if (event.target.id.includes("manager")) {
-            selectedVal = parseInt(selectedVal)
+        else if (event.target.id.includes("manager") || event.target.id.includes("fullTime")) {
+            selectedVal = event.target.checked
         }
         newEmployee[event.target.id] = selectedVal
         setEmployee(newEmployee)
@@ -70,7 +71,19 @@ export const EmployeeForm = () => {
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="manager">Management Position:</label>
-                    <input type="checkbox" id="manager" onChange={handleControlledInputChange} required autoFocus className="form-control" value={employee.manager} checked={item.value} />
+                    <input type="checkbox" id="manager" onChange={handleControlledInputChange} required autoFocus className="form-control" value={employee.manager} defaultChecked={false} />
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="form-group">
+                    <label htmlFor="fullTime">Full-Time Position:</label>
+                    <input type="checkbox" id="fullTime" onChange={handleControlledInputChange} required autoFocus className="form-control" value={employee.fullTime} defaultChecked={false} />
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="form-group">
+                    <label htmlFor="hourlyRate">Rate: $</label>
+                    <input type="number" id="hourlyRate" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="dollars per hour" value={employee.hourlyRate} min={9} />
                 </div>
             </fieldset>
             <button className="btn btn-primary" onClick={handleClickSaveEmployee}>Save Employee</button>
