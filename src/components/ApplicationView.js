@@ -3,13 +3,13 @@ import { Route } from "react-router-dom"
 import { Home } from "./Home"
 // import { CustomerProvider } from "./customer/CustomerProvider"
 // import { CustomerList } from "./customer/CustomerList"
-// import { EmployeeProvider } from "./employee/EmployeeProvider"
+import { EmployeeProvider } from "./employees/EmployeeProvider"
 // import { EmployeeList } from "./employee/EmployeeList"
 import { LocationProvider } from "./locations/LocationProvider"
 import { LocationList } from "./locations/LocationList"
 import { ProductProvider } from "./products/ProductProvider"
 import { ProductList } from "./products/ProductList"
-// import { EmployeeForm } from "./employee/EmployeeForm"
+import { EmployeeForm } from "./employees/EmployeeForm"
 // import { LocationForm } from "./location/LocationForm"
 
 export const ApplicationView = () => {
@@ -32,17 +32,17 @@ export const ApplicationView = () => {
                 <Route exact path="/customers">
                     <CustomerList />
                 </Route>
-            </CustomerProvider>
+            </CustomerProvider> */}
             <EmployeeProvider>
                 <LocationProvider>
-                    <Route exact path="/employees">
+                    {/* <Route exact path="/employees">
                         <EmployeeList />
-                    </Route>
+                    </Route> */}
                     <Route path="/employees/create">
                         <EmployeeForm />
                     </Route>
                 </LocationProvider>
-            </EmployeeProvider> */}
+            </EmployeeProvider>
         </>
     )
 }

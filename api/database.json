@@ -52,18 +52,21 @@
     "locations":[
         {
             "id": 1,
+            "name": "Australia",
             "address": "P Sherman 42 Wallaby Way",
             "squareFootage": 300,
             "handicapAccessible": true
         },
         {
             "id": 2,
+            "name": "Kentucky",
             "address": "3148 Lonestar St",
             "squareFootage": 5000,
             "handicapAccessible": false
         },
         {
             "id": 3,
+            "name": "Tennessee",
             "address": "123 Main",
             "squareFootage": 14000,
             "handicapAccessible": false
