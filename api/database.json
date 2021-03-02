@@ -100,5 +100,21 @@
       "type": "Sodas"
     }
   ],
-  "customers": []
+  "customers": [
+    {
+      "email": "nickcarver@amail.com",
+      "name": "Nick Carver",
+      "id": 1
+    },
+    {
+      "email": "his@email.com",
+      "name": "Gary Paulsen",
+      "id": 2
+    },
+    {
+      "email": "emailisnotathing@bible.com",
+      "name": "Paul theApostle",
+      "id": 3
+    }
+  ]
 }
